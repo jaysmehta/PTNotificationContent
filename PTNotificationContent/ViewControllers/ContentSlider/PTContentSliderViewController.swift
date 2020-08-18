@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import UserNotifications
+import UserNotificationsUI
 
 class PTContentSliderViewController: BasePTNotificationViewController {
 
@@ -17,6 +19,7 @@ class PTContentSliderViewController: BasePTNotificationViewController {
     var pageControl : UIPageControl?
     var currentView : SliderView?
     var currentIndex = 0
+    var transitioning : Bool = false, showsPaging : Bool = false, autoDismiss : Bool =  false, autoPlay : Bool = false
     
         
     override func viewDidLoad() {
@@ -51,9 +54,22 @@ class PTContentSliderViewController: BasePTNotificationViewController {
             itemModel.append(sliderView)
         }
         
-        setupPageControl()
+        autoPlay = config[ContentSlider.autoPlay] as! Bool
+        showsPaging = config[ContentSlider.showPaging] as! Bool
+        autoDismiss = config[ContentSlider.autoDismiss] as! Bool
+        
+        if showsPaging{
+            setupPageControl()
+        }
+        
         showNext()
-        startAutoPlay()
+        
+        if autoPlay{
+            startAutoPlay()
+        }else{
+            stopAutoPlay()
+        }
+        
         
     }
     
@@ -68,8 +84,18 @@ class PTContentSliderViewController: BasePTNotificationViewController {
         moveSlider(direction: 1)
     }
     
+    func showPrevious(){
+        moveSlider(direction: -1)
+    }
+    
     func moveSlider(direction : Int) {
         let numItems = itemModel.count
+        
+        if transitioning || numItems < 0 {
+            return
+        }
+        transitioning = true
+        
         let oldView = currentView
         if oldView == nil {
             currentIndex = 0
@@ -77,27 +103,61 @@ class PTContentSliderViewController: BasePTNotificationViewController {
             currentIndex+=direction
             if currentIndex >= numItems{
                 currentIndex = 0
-            }else if currentIndex < numItems{
+            }else if currentIndex < 0{
                 currentIndex = numItems-1
             }
         }
-        
         currentView = itemModel[currentIndex]
+        if (currentView == nil) {
+            return
+        }
         pageControl?.currentPage = currentIndex
         
         if (oldView != nil) && numItems > 1{
             UIView.transition(from: oldView!, to: currentView!, duration: 0.4, options: .transitionCrossDissolve) { (_) in
-                    
+                self.transitioning = false
             }
         }else{
             contentView.addSubview(currentView!)
+            transitioning = false
         }
+        
+        getParentViewController().userDidPerformAction(action: ContentSlider.viewContentItem, withProperties: itemsData[currentIndex])
     }
     
     func startAutoPlay(){
         if timerAutoPlay == nil{
             timerAutoPlay = Timer.scheduledTimer(timeInterval: 3.0, target: self, selector: #selector(self.showNext), userInfo: nil, repeats: true)
         }
+    }
+    
+    func stopAutoPlay(){
+        timerAutoPlay?.invalidate()
+        timerAutoPlay = nil
+    }
+    
+    override func handleAction(_ action: String?) throws -> UNNotificationContentExtensionResponseOption {
+        if action == SliderActions.actionOne{
+            stopAutoPlay()
+            showPrevious()
+        }else if action == SliderActions.actionTwo{
+            stopAutoPlay()
+            showNext()
+        }else if action == SliderActions.actionThree{
+            stopAutoPlay()
+            if itemModel.count > 0 {
+                let urlString = itemModel[currentIndex].actionURL
+                if urlString != ""{
+                    getParentViewController().userDidPerformAction(action: ContentSlider.openedContentURL, withProperties: itemsData[currentIndex])
+                    getParentViewController().openURL(url: URL(string: urlString)!)
+                }
+                
+                return autoDismiss ? UNNotificationContentExtensionResponseOption.dismiss : UNNotificationContentExtensionResponseOption.doNotDismiss
+                
+            }
+        }
+        
+        return UNNotificationContentExtensionResponseOption.doNotDismiss
     }
     
     /*

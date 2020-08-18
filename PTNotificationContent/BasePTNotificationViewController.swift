@@ -17,9 +17,14 @@ class BasePTNotificationViewController: UIViewController {
         NSException(name: .internalInconsistencyException, reason: "You must override \(#function)) in a subclass", userInfo: nil).raise()
     }
     
-    func handleAction(action : String, completionHandler completion : (UNNotificationContentExtensionResponseOption) -> Void) {
-        NSException(name: .internalInconsistencyException, reason: "You must override \(#function)) in a subclass", userInfo: nil).raise()
+    
+    func handleAction(_ action: String?) throws -> UNNotificationContentExtensionResponseOption {
+        throw NSException(
+            name: .internalInconsistencyException,
+            reason: "You must override \(NSStringFromSelector(#function)) in a subclass",
+            userInfo: nil) as! Error
     }
+
     
     func getParentViewController() -> PTNotificationViewController {
         return parent as! PTNotificationViewController

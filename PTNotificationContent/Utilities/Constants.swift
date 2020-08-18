@@ -15,9 +15,19 @@ struct ContentSlider {
     static let itemsObject = "items"
     static let caption = "caption"
     static let subCaption = "subcaption"
-    
+    static let autoPlay = "autoPlay"
+    static let autoDismiss = "autoDismiss"
+    static let showPaging = "showsPaging"
+    static let viewContentItem = "CTViewedContentItem"
+    static let openedContentURL = "CTOpenedContentUrl"
 }
 
 struct TemplateType {
     static let type = "type"
+}
+
+struct SliderActions {
+    static let actionOne = "action_1"
+    static let actionTwo = "action_2"
+    static let actionThree = "action_3"
 }

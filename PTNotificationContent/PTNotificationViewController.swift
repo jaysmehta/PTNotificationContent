@@ -33,6 +33,18 @@ open class PTNotificationViewController: UIViewController {
         contentViewController = contentChildViewController
     }
 
+    open func userDidPerformAction(action : String, withProperties properties : [String : AnyObject]){
+        // implement in your subclass to get user event type data
+    }
+    
+    open func openURL(url : URL){ // convenience method
+        extensionContext?.open(url, completionHandler: nil)
+    }
+    
+    open func userDidReceiveNotificationResponse(response : UNNotificationResponse){
+        // implement in your subclass to get notification response
+    }
+    
     /*
     // MARK: - Navigation
 
@@ -53,6 +65,15 @@ extension PTNotificationViewController : UNNotificationContentExtension {
     
     public func didReceive(_ response: UNNotificationResponse, completionHandler completion: @escaping (UNNotificationContentExtensionResponseOption) -> Void) {
         
+        do{
+            let actionResponse = try contentViewController.handleAction(response.actionIdentifier)
+            userDidReceiveNotificationResponse(response: response)
+            completion(actionResponse)
+                   
+        }catch let error{
+            print(error)
+        }
+       
     }
     
     func parseAndCheckTemplate(userInfo : [String : AnyObject], notification : UNNotification){
