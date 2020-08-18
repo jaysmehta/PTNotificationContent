@@ -8,12 +8,32 @@
 
 /* Begin PBXBuildFile section */
 		773DB1CA24E65F1E00396F05 /* PTNotificationContent.h in Headers */ = {isa = PBXBuildFile; fileRef = 773DB1C824E65F1E00396F05 /* PTNotificationContent.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		773DB1D124E6637600396F05 /* BasePTNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773DB1D024E6637600396F05 /* BasePTNotificationViewController.swift */; };
+		773DB1D524E665EF00396F05 /* UserNotificationsUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773DB1D324E665EF00396F05 /* UserNotificationsUI.framework */; };
+		773DB1D624E665EF00396F05 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 773DB1D424E665EF00396F05 /* UserNotifications.framework */; };
+		773DB1D824E6674C00396F05 /* PTNotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773DB1D724E6674C00396F05 /* PTNotificationViewController.swift */; };
+		773DB1DC24E6753F00396F05 /* PTContentSliderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773DB1DA24E6753F00396F05 /* PTContentSliderViewController.swift */; };
+		773DB1E024E6766800396F05 /* PTRatingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773DB1DF24E6766800396F05 /* PTRatingViewController.swift */; };
+		773DB1E424E679C300396F05 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773DB1E324E679C300396F05 /* SliderView.swift */; };
+		773DB1E724E679F400396F05 /* SliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773DB1E624E679F400396F05 /* SliderView.xib */; };
+		773DB1EA24E68A9C00396F05 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773DB1E924E68A9C00396F05 /* Extension.swift */; };
+		7783A94124E806E600083E7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783A94024E806E600083E7E /* Constants.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		773DB1C524E65F1E00396F05 /* PTNotificationContent.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = PTNotificationContent.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		773DB1C824E65F1E00396F05 /* PTNotificationContent.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PTNotificationContent.h; sourceTree = "<group>"; };
 		773DB1C924E65F1E00396F05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		773DB1D024E6637600396F05 /* BasePTNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePTNotificationViewController.swift; sourceTree = "<group>"; };
+		773DB1D324E665EF00396F05 /* UserNotificationsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotificationsUI.framework; path = System/Library/Frameworks/UserNotificationsUI.framework; sourceTree = SDKROOT; };
+		773DB1D424E665EF00396F05 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		773DB1D724E6674C00396F05 /* PTNotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTNotificationViewController.swift; sourceTree = "<group>"; };
+		773DB1DA24E6753F00396F05 /* PTContentSliderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTContentSliderViewController.swift; sourceTree = "<group>"; };
+		773DB1DF24E6766800396F05 /* PTRatingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTRatingViewController.swift; sourceTree = "<group>"; };
+		773DB1E324E679C300396F05 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
+		773DB1E624E679F400396F05 /* SliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderView.xib; sourceTree = "<group>"; };
+		773DB1E924E68A9C00396F05 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		7783A94024E806E600083E7E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -21,6 +41,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773DB1D624E665EF00396F05 /* UserNotifications.framework in Frameworks */,
+				773DB1D524E665EF00396F05 /* UserNotificationsUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -32,6 +54,7 @@
 			children = (
 				773DB1C724E65F1E00396F05 /* PTNotificationContent */,
 				773DB1C624E65F1E00396F05 /* Products */,
+				773DB1D224E665EF00396F05 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -46,10 +69,75 @@
 		773DB1C724E65F1E00396F05 /* PTNotificationContent */ = {
 			isa = PBXGroup;
 			children = (
+				773DB1E824E68A8C00396F05 /* Utilities */,
+				773DB1E224E6793F00396F05 /* ViewControllers */,
+				773DB1E124E6793500396F05 /* Views */,
 				773DB1C824E65F1E00396F05 /* PTNotificationContent.h */,
 				773DB1C924E65F1E00396F05 /* Info.plist */,
+				773DB1D024E6637600396F05 /* BasePTNotificationViewController.swift */,
+				773DB1D724E6674C00396F05 /* PTNotificationViewController.swift */,
 			);
 			path = PTNotificationContent;
+			sourceTree = "<group>";
+		};
+		773DB1D224E665EF00396F05 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				773DB1D424E665EF00396F05 /* UserNotifications.framework */,
+				773DB1D324E665EF00396F05 /* UserNotificationsUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		773DB1D924E6752300396F05 /* ContentSlider */ = {
+			isa = PBXGroup;
+			children = (
+				773DB1DA24E6753F00396F05 /* PTContentSliderViewController.swift */,
+			);
+			path = ContentSlider;
+			sourceTree = "<group>";
+		};
+		773DB1DE24E6765800396F05 /* Rating */ = {
+			isa = PBXGroup;
+			children = (
+				773DB1DF24E6766800396F05 /* PTRatingViewController.swift */,
+			);
+			path = Rating;
+			sourceTree = "<group>";
+		};
+		773DB1E124E6793500396F05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				773DB1E524E679CD00396F05 /* SliderView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		773DB1E224E6793F00396F05 /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				773DB1DE24E6765800396F05 /* Rating */,
+				773DB1D924E6752300396F05 /* ContentSlider */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		773DB1E524E679CD00396F05 /* SliderView */ = {
+			isa = PBXGroup;
+			children = (
+				773DB1E324E679C300396F05 /* SliderView.swift */,
+				773DB1E624E679F400396F05 /* SliderView.xib */,
+			);
+			path = SliderView;
+			sourceTree = "<group>";
+		};
+		773DB1E824E68A8C00396F05 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				773DB1E924E68A9C00396F05 /* Extension.swift */,
+				7783A94024E806E600083E7E /* Constants.swift */,
+			);
+			path = Utilities;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -95,6 +183,7 @@
 				TargetAttributes = {
 					773DB1C424E65F1E00396F05 = {
 						CreatedOnToolsVersion = 11.4.1;
+						LastSwiftMigration = 1140;
 					};
 				};
 			};
@@ -121,6 +210,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773DB1E724E679F400396F05 /* SliderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -131,6 +221,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				773DB1D124E6637600396F05 /* BasePTNotificationViewController.swift in Sources */,
+				773DB1D824E6674C00396F05 /* PTNotificationViewController.swift in Sources */,
+				773DB1DC24E6753F00396F05 /* PTContentSliderViewController.swift in Sources */,
+				773DB1EA24E68A9C00396F05 /* Extension.swift in Sources */,
+				7783A94124E806E600083E7E /* Constants.swift in Sources */,
+				773DB1E024E6766800396F05 /* PTRatingViewController.swift in Sources */,
+				773DB1E424E679C300396F05 /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +285,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -245,7 +342,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -260,6 +357,8 @@
 		773DB1CE24E65F1E00396F05 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7XM67G79YA;
@@ -268,6 +367,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PTNotificationContent/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -276,6 +376,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JM.PTNotificationContent;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -284,6 +386,8 @@
 		773DB1CF24E65F1E00396F05 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = 7XM67G79YA;
@@ -292,6 +396,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = PTNotificationContent/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -300,6 +405,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.JM.PTNotificationContent;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
