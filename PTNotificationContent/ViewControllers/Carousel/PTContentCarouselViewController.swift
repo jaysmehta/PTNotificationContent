@@ -24,6 +24,8 @@ class PTContentCarouselViewController: BasePTNotificationViewController {
     
     override func configureViewForContent(content: UNNotificationContent) {
         
+        let userInfo = Helper.getJSONForCarousel(data: content.userInfo as! [String : AnyObject])
+        
         if raisedCarousel{
             view.frame = CGRect(x: 0, y: 0, width: self.view.frame.size.width, height: (self.view.frame.size.width-50))//Carousel Layout
         }else{
@@ -32,12 +34,9 @@ class PTContentCarouselViewController: BasePTNotificationViewController {
         
         contentView.frame = view.frame
         preferredContentSize = CGSize(width: view.frame.size.width, height: view.frame.size.height)
-        
-        let dataObj = [["image":"","caption":"hello1","subcaption":"welcome"],["image":"","caption":"hello2","subcaption":"welcome"],
-            ["image":"","caption":"hello3","subcaption":"welcome"]]
 
-        let carouselView = CarouselView.init(frame: contentView.frame, carouselData: dataObj as [[String : AnyObject]])
-        
+        let carouselView = CarouselView.init(frame: contentView.frame, carouselData: userInfo)
+        carouselView.setupCollectionView(isRaisedCarousel: raisedCarousel)
         contentView.addSubview(carouselView)
         
     }

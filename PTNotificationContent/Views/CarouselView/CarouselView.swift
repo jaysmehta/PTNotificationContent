@@ -68,13 +68,13 @@ class CarouselView: UIView {
         
     }
     
+    
 
 }
 
 extension CarouselView : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        //carouselDataObject.count*2
-        500
+        carouselDataObject.count*Carousel.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
@@ -82,17 +82,17 @@ extension CarouselView : UICollectionViewDelegate, UICollectionViewDataSource, U
         if isRaisedCarousel{
             let carouselCell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouselRaisedCell", for: indexPath) as! CollectionViewCarouselCell
             let tmpData = carouselDataObject[indexPath.row % carouselDataObject.count]
-            carouselCell.imageView.downloaded(from: tmpData["image"] as! String)
-            carouselCell.titleLabel.text = tmpData["caption"] as? String
-            carouselCell.subTitleLabel.text = tmpData["subcaption"] as? String
+            carouselCell.imageView.downloaded(from: tmpData["pt_img\(indexPath.row % carouselDataObject.count+1)"] as! String)
+            carouselCell.titleLabel.text = tmpData["pt_title\(indexPath.row % carouselDataObject.count+1)"] as? String
+            carouselCell.subTitleLabel.text = tmpData["pt_subtitle\(indexPath.row % carouselDataObject.count+1)"] as? String
             return carouselCell
             
         }else {
             let carouselCell = collectionView.dequeueReusableCell(withReuseIdentifier: "carouselCell", for: indexPath) as! CollectionViewCell
             let tmpData = carouselDataObject[indexPath.row % carouselDataObject.count]
-            carouselCell.imageView.downloaded(from: tmpData["image"] as! String)
-            carouselCell.titleLabel.text = tmpData["caption"] as? String
-            carouselCell.subTitleLabel.text = tmpData["subcaption"] as? String
+            carouselCell.imageView.downloaded(from: tmpData["pt_img\(indexPath.row % carouselDataObject.count+1)"] as! String)
+            carouselCell.titleLabel.text = tmpData["pt_title\(indexPath.row % carouselDataObject.count+1)"] as? String
+            carouselCell.subTitleLabel.text = tmpData["pt_subtitle\(indexPath.row % carouselDataObject.count+1)"] as? String
             return carouselCell
         }
         
@@ -111,12 +111,14 @@ extension CarouselView : UICollectionViewDelegate, UICollectionViewDataSource, U
     internal func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
         if !onceOnly {
             //set the row and section you need.
-            let indexToScrollTo = IndexPath(row: 500/2, section: indexPath.section)
+            let indexToScrollTo = IndexPath(row: carouselDataObject.count*Carousel.count/2, section: indexPath.section)
             carouselCollectionView.scrollToItem(at: indexToScrollTo, at:.centeredHorizontally, animated: false)
             onceOnly = true
         }
         
     }
+    
+    
     
 }
 

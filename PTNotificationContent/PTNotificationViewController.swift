@@ -109,11 +109,11 @@ extension PTNotificationViewController : UNNotificationContentExtension {
     
     func renderCarouselTemplate(notification : UNNotification, templateType : ContentType){
         let contentController = PTContentCarouselViewController()
-        displayController(contentChildViewController: contentController)
-        contentViewController.configureViewForContent(content: notification.request.content)
         if templateType == .raisedcarousel{
             contentController.raisedCarousel = true
         }
+        displayController(contentChildViewController: contentController)
+        contentViewController.configureViewForContent(content: notification.request.content)
         view.frame = contentViewController.view.frame
         preferredContentSize = contentViewController.preferredContentSize
     }

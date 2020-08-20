@@ -20,7 +20,6 @@ class CollectionViewCell: UICollectionViewCell {
         // Initialization code
         let caLayer = self.layer
         caLayer.cornerRadius = 5
-
     }
     
 }

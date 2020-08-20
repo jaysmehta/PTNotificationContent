@@ -33,5 +33,5 @@ struct SliderActions {
 }
 
 struct Carousel {
-    static let imageURL = "pt_img1"
+    static let count = 100
 }
