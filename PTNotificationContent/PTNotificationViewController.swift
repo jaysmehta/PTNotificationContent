@@ -84,25 +84,38 @@ extension PTNotificationViewController : UNNotificationContentExtension {
         let enumTemplate = ContentType(rawValue: strTemplate)
         switch enumTemplate {
         case .slider:
-            let contentController = PTContentSliderViewController()
-            displayController(contentChildViewController: contentController)
-            contentViewController.configureViewForContent(content: notification.request.content)
-            view.frame = contentViewController.view.frame
-            preferredContentSize = contentViewController.preferredContentSize
+            renderContentSliderTemplate(notification: notification)
         case .rating:
-            let contentController = PTRatingViewController()
-            displayController(contentChildViewController: contentController)
+            renderRatingTemplate(notification: notification)
         case .flatcarousel,.raisedcarousel:
-            let contentController = PTContentCarouselViewController()
-            displayController(contentChildViewController: contentController)
-            contentViewController.configureViewForContent(content: notification.request.content)
-            if enumTemplate == .raisedcarousel{
-                contentController.raisedCarousel = true
-            }
-            view.frame = contentViewController.view.frame
-            preferredContentSize = contentViewController.preferredContentSize
+            renderCarouselTemplate(notification: notification, templateType: enumTemplate!)
         case .none:
             print("none")
         }
     }
+    
+    func renderContentSliderTemplate (notification : UNNotification){
+        let contentController = PTContentSliderViewController()
+        displayController(contentChildViewController: contentController)
+        contentViewController.configureViewForContent(content: notification.request.content)
+        view.frame = contentViewController.view.frame
+        preferredContentSize = contentViewController.preferredContentSize
+    }
+    
+    func renderRatingTemplate (notification : UNNotification){
+        let contentController = PTRatingViewController()
+        displayController(contentChildViewController: contentController)
+    }
+    
+    func renderCarouselTemplate(notification : UNNotification, templateType : ContentType){
+        let contentController = PTContentCarouselViewController()
+        displayController(contentChildViewController: contentController)
+        contentViewController.configureViewForContent(content: notification.request.content)
+        if templateType == .raisedcarousel{
+            contentController.raisedCarousel = true
+        }
+        view.frame = contentViewController.view.frame
+        preferredContentSize = contentViewController.preferredContentSize
+    }
+    
 }
