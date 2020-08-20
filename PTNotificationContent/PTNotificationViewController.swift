@@ -13,6 +13,8 @@ import UserNotificationsUI
 enum ContentType : String {
     case slider = "slider"
     case rating = "rating"
+    case flatcarousel = "flat_carousel"
+    case raisedcarousel = "raised_carousel"
 }
 
 
@@ -90,6 +92,15 @@ extension PTNotificationViewController : UNNotificationContentExtension {
         case .rating:
             let contentController = PTRatingViewController()
             displayController(contentChildViewController: contentController)
+        case .flatcarousel,.raisedcarousel:
+            let contentController = PTContentCarouselViewController()
+            displayController(contentChildViewController: contentController)
+            contentViewController.configureViewForContent(content: notification.request.content)
+            if enumTemplate == .raisedcarousel{
+                contentController.raisedCarousel = true
+            }
+            view.frame = contentViewController.view.frame
+            preferredContentSize = contentViewController.preferredContentSize
         case .none:
             print("none")
         }

@@ -24,6 +24,7 @@ class SliderView: UIView {
         // Drawing code
     }
     */
+    
     init(frame: CGRect, imageURL : String,caption : String, subCaption : String,actionURL : String) {
         
         super.init(frame : frame)

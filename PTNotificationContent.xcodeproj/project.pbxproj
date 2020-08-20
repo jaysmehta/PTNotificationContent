@@ -17,7 +17,15 @@
 		773DB1E424E679C300396F05 /* SliderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773DB1E324E679C300396F05 /* SliderView.swift */; };
 		773DB1E724E679F400396F05 /* SliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773DB1E624E679F400396F05 /* SliderView.xib */; };
 		773DB1EA24E68A9C00396F05 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773DB1E924E68A9C00396F05 /* Extension.swift */; };
+		776E8E0324EC4499000CBD6F /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7775DB7424EC3E4D00989036 /* CollectionViewCell.xib */; };
+		7773813A24EC04A50007B28C /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773813924EC04A50007B28C /* CarouselView.swift */; };
+		7773813C24EC04B30007B28C /* CarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7773813B24EC04B30007B28C /* CarouselView.xib */; };
+		7773813E24EC06220007B28C /* PTContentCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773813D24EC06220007B28C /* PTContentCarouselViewController.swift */; };
+		7775DB7524EC3E4D00989036 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775DB7324EC3E4D00989036 /* CollectionViewCell.swift */; };
 		7783A94124E806E600083E7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783A94024E806E600083E7E /* Constants.swift */; };
+		779DB06F24ECF34A0020AAB2 /* CarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779DB06E24ECF34A0020AAB2 /* CarouselLayout.swift */; };
+		779DB07224ECFA270020AAB2 /* CollectionViewCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779DB07024ECFA260020AAB2 /* CollectionViewCarouselCell.swift */; };
+		779DB07324ECFA270020AAB2 /* CollectionViewCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779DB07124ECFA270020AAB2 /* CollectionViewCarouselCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,7 +41,15 @@
 		773DB1E324E679C300396F05 /* SliderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SliderView.swift; sourceTree = "<group>"; };
 		773DB1E624E679F400396F05 /* SliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderView.xib; sourceTree = "<group>"; };
 		773DB1E924E68A9C00396F05 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		7773813924EC04A50007B28C /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
+		7773813B24EC04B30007B28C /* CarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselView.xib; sourceTree = "<group>"; };
+		7773813D24EC06220007B28C /* PTContentCarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTContentCarouselViewController.swift; sourceTree = "<group>"; };
+		7775DB7324EC3E4D00989036 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		7775DB7424EC3E4D00989036 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
 		7783A94024E806E600083E7E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		779DB06E24ECF34A0020AAB2 /* CarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayout.swift; sourceTree = "<group>"; };
+		779DB07024ECFA260020AAB2 /* CollectionViewCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCarouselCell.swift; sourceTree = "<group>"; };
+		779DB07124ECFA270020AAB2 /* CollectionViewCarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCarouselCell.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +124,7 @@
 		773DB1E124E6793500396F05 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				7773813824EC04860007B28C /* CarouselView */,
 				773DB1E524E679CD00396F05 /* SliderView */,
 			);
 			path = Views;
@@ -116,6 +133,7 @@
 		773DB1E224E6793F00396F05 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				7773813724EC046F0007B28C /* Carousel */,
 				773DB1DE24E6765800396F05 /* Rating */,
 				773DB1D924E6752300396F05 /* ContentSlider */,
 			);
@@ -138,6 +156,44 @@
 				7783A94024E806E600083E7E /* Constants.swift */,
 			);
 			path = Utilities;
+			sourceTree = "<group>";
+		};
+		7773813724EC046F0007B28C /* Carousel */ = {
+			isa = PBXGroup;
+			children = (
+				7773813D24EC06220007B28C /* PTContentCarouselViewController.swift */,
+			);
+			path = Carousel;
+			sourceTree = "<group>";
+		};
+		7773813824EC04860007B28C /* CarouselView */ = {
+			isa = PBXGroup;
+			children = (
+				7787075524EE44DC002E01C1 /* CarouselFlatView */,
+				7787075424EE44BA002E01C1 /* CarouselRaisedView */,
+				7773813924EC04A50007B28C /* CarouselView.swift */,
+				7773813B24EC04B30007B28C /* CarouselView.xib */,
+			);
+			path = CarouselView;
+			sourceTree = "<group>";
+		};
+		7787075424EE44BA002E01C1 /* CarouselRaisedView */ = {
+			isa = PBXGroup;
+			children = (
+				779DB06E24ECF34A0020AAB2 /* CarouselLayout.swift */,
+				779DB07024ECFA260020AAB2 /* CollectionViewCarouselCell.swift */,
+				779DB07124ECFA270020AAB2 /* CollectionViewCarouselCell.xib */,
+			);
+			path = CarouselRaisedView;
+			sourceTree = "<group>";
+		};
+		7787075524EE44DC002E01C1 /* CarouselFlatView */ = {
+			isa = PBXGroup;
+			children = (
+				7775DB7324EC3E4D00989036 /* CollectionViewCell.swift */,
+				7775DB7424EC3E4D00989036 /* CollectionViewCell.xib */,
+			);
+			path = CarouselFlatView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,6 +266,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779DB07324ECFA270020AAB2 /* CollectionViewCarouselCell.xib in Resources */,
+				776E8E0324EC4499000CBD6F /* CollectionViewCell.xib in Resources */,
+				7773813C24EC04B30007B28C /* CarouselView.xib in Resources */,
 				773DB1E724E679F400396F05 /* SliderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,12 +280,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				779DB07224ECFA270020AAB2 /* CollectionViewCarouselCell.swift in Sources */,
+				7775DB7524EC3E4D00989036 /* CollectionViewCell.swift in Sources */,
 				773DB1D124E6637600396F05 /* BasePTNotificationViewController.swift in Sources */,
+				7773813E24EC06220007B28C /* PTContentCarouselViewController.swift in Sources */,
 				773DB1D824E6674C00396F05 /* PTNotificationViewController.swift in Sources */,
 				773DB1DC24E6753F00396F05 /* PTContentSliderViewController.swift in Sources */,
 				773DB1EA24E68A9C00396F05 /* Extension.swift in Sources */,
 				7783A94124E806E600083E7E /* Constants.swift in Sources */,
 				773DB1E024E6766800396F05 /* PTRatingViewController.swift in Sources */,
+				7773813A24EC04A50007B28C /* CarouselView.swift in Sources */,
+				779DB06F24ECF34A0020AAB2 /* CarouselLayout.swift in Sources */,
 				773DB1E424E679C300396F05 /* SliderView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

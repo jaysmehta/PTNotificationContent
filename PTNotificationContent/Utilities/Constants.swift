@@ -23,11 +23,15 @@ struct ContentSlider {
 }
 
 struct TemplateType {
-    static let type = "type"
+    static let type = "pt_id"
 }
 
 struct SliderActions {
     static let actionOne = "action_1"
     static let actionTwo = "action_2"
     static let actionThree = "action_3"
+}
+
+struct Carousel {
+    static let imageURL = "pt_img1"
 }
