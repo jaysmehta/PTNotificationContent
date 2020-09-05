@@ -122,7 +122,7 @@ class PTContentSliderViewController: BasePTNotificationViewController {
             transitioning = false
         }
         
-        getParentViewController().userDidPerformAction(action: ContentSlider.viewContentItem, withProperties: itemsData[currentIndex])
+        getParentViewController()?.userDidPerformAction(action: ContentSlider.viewContentItem, withProperties: itemsData[currentIndex])
     }
     
     func startAutoPlay(){
@@ -148,8 +148,8 @@ class PTContentSliderViewController: BasePTNotificationViewController {
             if itemModel.count > 0 {
                 let urlString = itemModel[currentIndex].actionURL
                 if urlString != ""{
-                    getParentViewController().userDidPerformAction(action: ContentSlider.openedContentURL, withProperties: itemsData[currentIndex])
-                    getParentViewController().openURL(url: URL(string: urlString)!)
+                    getParentViewController()?.userDidPerformAction(action: ContentSlider.openedContentURL, withProperties: itemsData[currentIndex])
+                    getParentViewController()?.openURL(url: URL(string: urlString)!)
                 }
                 
                 return autoDismiss ? UNNotificationContentExtensionResponseOption.dismiss : UNNotificationContentExtensionResponseOption.doNotDismiss

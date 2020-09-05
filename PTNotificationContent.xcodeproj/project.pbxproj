@@ -18,15 +18,21 @@
 		773DB1E724E679F400396F05 /* SliderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 773DB1E624E679F400396F05 /* SliderView.xib */; };
 		773DB1EA24E68A9C00396F05 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 773DB1E924E68A9C00396F05 /* Extension.swift */; };
 		7743EA4524EE74ED00E32C1B /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7743EA4424EE74ED00E32C1B /* Helper.swift */; };
+		775DEA1625036F4300E81F9C /* PTWebViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DEA1525036F4300E81F9C /* PTWebViewViewController.swift */; };
+		775DEA1925036FB800E81F9C /* PTWebView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 775DEA1825036FB800E81F9C /* PTWebView.swift */; };
 		776E8E0324EC4499000CBD6F /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7775DB7424EC3E4D00989036 /* CollectionViewCell.xib */; };
 		7773813A24EC04A50007B28C /* CarouselView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773813924EC04A50007B28C /* CarouselView.swift */; };
 		7773813C24EC04B30007B28C /* CarouselView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7773813B24EC04B30007B28C /* CarouselView.xib */; };
 		7773813E24EC06220007B28C /* PTContentCarouselViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7773813D24EC06220007B28C /* PTContentCarouselViewController.swift */; };
 		7775DB7524EC3E4D00989036 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7775DB7324EC3E4D00989036 /* CollectionViewCell.swift */; };
+		777BD1E224F6458700990D2C /* PTVideoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BD1E124F6458700990D2C /* PTVideoViewController.swift */; };
+		777BD1E524F645EC00990D2C /* VideoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777BD1E424F645EC00990D2C /* VideoView.swift */; };
+		777BD1E724F645F800990D2C /* VideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 777BD1E624F645F800990D2C /* VideoView.xib */; };
 		7783A94124E806E600083E7E /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7783A94024E806E600083E7E /* Constants.swift */; };
 		779DB06F24ECF34A0020AAB2 /* CarouselLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779DB06E24ECF34A0020AAB2 /* CarouselLayout.swift */; };
 		779DB07224ECFA270020AAB2 /* CollectionViewCarouselCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 779DB07024ECFA260020AAB2 /* CollectionViewCarouselCell.swift */; };
 		779DB07324ECFA270020AAB2 /* CollectionViewCarouselCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 779DB07124ECFA270020AAB2 /* CollectionViewCarouselCell.xib */; };
+		77A8E9F224F7C61C00F56088 /* play.png in Resources */ = {isa = PBXBuildFile; fileRef = 77A8E9F124F7C61C00F56088 /* play.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,15 +49,21 @@
 		773DB1E624E679F400396F05 /* SliderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SliderView.xib; sourceTree = "<group>"; };
 		773DB1E924E68A9C00396F05 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		7743EA4424EE74ED00E32C1B /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		775DEA1525036F4300E81F9C /* PTWebViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTWebViewViewController.swift; sourceTree = "<group>"; };
+		775DEA1825036FB800E81F9C /* PTWebView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTWebView.swift; sourceTree = "<group>"; };
 		7773813924EC04A50007B28C /* CarouselView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselView.swift; sourceTree = "<group>"; };
 		7773813B24EC04B30007B28C /* CarouselView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CarouselView.xib; sourceTree = "<group>"; };
 		7773813D24EC06220007B28C /* PTContentCarouselViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTContentCarouselViewController.swift; sourceTree = "<group>"; };
 		7775DB7324EC3E4D00989036 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		7775DB7424EC3E4D00989036 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		777BD1E124F6458700990D2C /* PTVideoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PTVideoViewController.swift; sourceTree = "<group>"; };
+		777BD1E424F645EC00990D2C /* VideoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoView.swift; sourceTree = "<group>"; };
+		777BD1E624F645F800990D2C /* VideoView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = VideoView.xib; sourceTree = "<group>"; };
 		7783A94024E806E600083E7E /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		779DB06E24ECF34A0020AAB2 /* CarouselLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CarouselLayout.swift; sourceTree = "<group>"; };
 		779DB07024ECFA260020AAB2 /* CollectionViewCarouselCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCarouselCell.swift; sourceTree = "<group>"; };
 		779DB07124ECFA270020AAB2 /* CollectionViewCarouselCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCarouselCell.xib; sourceTree = "<group>"; };
+		77A8E9F124F7C61C00F56088 /* play.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = play.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -126,6 +138,8 @@
 		773DB1E124E6793500396F05 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				775DEA1725036F8100E81F9C /* PTWebView */,
+				777BD1E324F645BD00990D2C /* VideoView */,
 				7773813824EC04860007B28C /* CarouselView */,
 				773DB1E524E679CD00396F05 /* SliderView */,
 			);
@@ -135,6 +149,8 @@
 		773DB1E224E6793F00396F05 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				775DEA1425036F2900E81F9C /* WebView */,
+				777BD1E024F6456400990D2C /* Video */,
 				7773813724EC046F0007B28C /* Carousel */,
 				773DB1DE24E6765800396F05 /* Rating */,
 				773DB1D924E6752300396F05 /* ContentSlider */,
@@ -161,6 +177,22 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		775DEA1425036F2900E81F9C /* WebView */ = {
+			isa = PBXGroup;
+			children = (
+				775DEA1525036F4300E81F9C /* PTWebViewViewController.swift */,
+			);
+			path = WebView;
+			sourceTree = "<group>";
+		};
+		775DEA1725036F8100E81F9C /* PTWebView */ = {
+			isa = PBXGroup;
+			children = (
+				775DEA1825036FB800E81F9C /* PTWebView.swift */,
+			);
+			path = PTWebView;
+			sourceTree = "<group>";
+		};
 		7773813724EC046F0007B28C /* Carousel */ = {
 			isa = PBXGroup;
 			children = (
@@ -180,6 +212,24 @@
 			path = CarouselView;
 			sourceTree = "<group>";
 		};
+		777BD1E024F6456400990D2C /* Video */ = {
+			isa = PBXGroup;
+			children = (
+				777BD1E124F6458700990D2C /* PTVideoViewController.swift */,
+			);
+			path = Video;
+			sourceTree = "<group>";
+		};
+		777BD1E324F645BD00990D2C /* VideoView */ = {
+			isa = PBXGroup;
+			children = (
+				77A8E9F024F7C5E800F56088 /* Resources */,
+				777BD1E424F645EC00990D2C /* VideoView.swift */,
+				777BD1E624F645F800990D2C /* VideoView.xib */,
+			);
+			path = VideoView;
+			sourceTree = "<group>";
+		};
 		7787075424EE44BA002E01C1 /* CarouselRaisedView */ = {
 			isa = PBXGroup;
 			children = (
@@ -197,6 +247,14 @@
 				7775DB7424EC3E4D00989036 /* CollectionViewCell.xib */,
 			);
 			path = CarouselFlatView;
+			sourceTree = "<group>";
+		};
+		77A8E9F024F7C5E800F56088 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				77A8E9F124F7C61C00F56088 /* play.png */,
+			);
+			path = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +330,9 @@
 				779DB07324ECFA270020AAB2 /* CollectionViewCarouselCell.xib in Resources */,
 				776E8E0324EC4499000CBD6F /* CollectionViewCell.xib in Resources */,
 				7773813C24EC04B30007B28C /* CarouselView.xib in Resources */,
+				777BD1E724F645F800990D2C /* VideoView.xib in Resources */,
 				773DB1E724E679F400396F05 /* SliderView.xib in Resources */,
+				77A8E9F224F7C61C00F56088 /* play.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,9 +345,13 @@
 			files = (
 				779DB07224ECFA270020AAB2 /* CollectionViewCarouselCell.swift in Sources */,
 				7775DB7524EC3E4D00989036 /* CollectionViewCell.swift in Sources */,
+				775DEA1925036FB800E81F9C /* PTWebView.swift in Sources */,
+				777BD1E224F6458700990D2C /* PTVideoViewController.swift in Sources */,
 				773DB1D124E6637600396F05 /* BasePTNotificationViewController.swift in Sources */,
+				775DEA1625036F4300E81F9C /* PTWebViewViewController.swift in Sources */,
 				7773813E24EC06220007B28C /* PTContentCarouselViewController.swift in Sources */,
 				773DB1D824E6674C00396F05 /* PTNotificationViewController.swift in Sources */,
+				777BD1E524F645EC00990D2C /* VideoView.swift in Sources */,
 				773DB1DC24E6753F00396F05 /* PTContentSliderViewController.swift in Sources */,
 				773DB1EA24E68A9C00396F05 /* Extension.swift in Sources */,
 				7783A94124E806E600083E7E /* Constants.swift in Sources */,

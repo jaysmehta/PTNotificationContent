@@ -26,8 +26,8 @@ class BasePTNotificationViewController: UIViewController {
     }
 
     
-    func getParentViewController() -> PTNotificationViewController {
-        return parent as! PTNotificationViewController
+    func getParentViewController() -> PTNotificationViewController? {
+        return parent as? PTNotificationViewController
     }
 
 }

@@ -15,6 +15,8 @@ enum ContentType : String {
     case rating = "rating"
     case flatcarousel = "flat_carousel"
     case raisedcarousel = "raised_carousel"
+    case video = "video"
+    case webview = "webview"
 }
 
 
@@ -89,6 +91,10 @@ extension PTNotificationViewController : UNNotificationContentExtension {
             renderRatingTemplate(notification: notification)
         case .flatcarousel,.raisedcarousel:
             renderCarouselTemplate(notification: notification, templateType: enumTemplate!)
+        case .video:
+            renderVideoTemplate(notification: notification)
+        case .webview:
+            renderWebViewTemplate(notification: notification)
         case .none:
             print("none")
         }
@@ -105,6 +111,22 @@ extension PTNotificationViewController : UNNotificationContentExtension {
     func renderRatingTemplate (notification : UNNotification){
         let contentController = PTRatingViewController()
         displayController(contentChildViewController: contentController)
+    }
+    
+    func renderVideoTemplate (notification : UNNotification){
+        let contentController = PTVideoViewController()
+        displayController(contentChildViewController: contentController)
+        contentViewController.configureViewForContent(content: notification.request.content)
+        view.frame = contentViewController.view.frame
+        preferredContentSize = contentViewController.preferredContentSize
+    }
+    
+    func renderWebViewTemplate (notification : UNNotification){
+        let contentController = PTWebViewViewController()
+        displayController(contentChildViewController: contentController)
+        contentViewController.configureViewForContent(content: notification.request.content)
+        view.frame = contentViewController.view.frame
+        preferredContentSize = contentViewController.preferredContentSize
     }
     
     func renderCarouselTemplate(notification : UNNotification, templateType : ContentType){
